@@ -38,21 +38,23 @@ const packages = [{
   weight: 6,
   to: 'Nifflers',
   trackingNumber: '4b2l0z',
-  shape: ''
+  shape: 'round',
 },
 {
   priorityLevel: 'standard',
   isFragile: false,
   weight: 5,
   to: 'Deku',
-  trackingNumber: '8081baz'
+  trackingNumber: '8081baz',
+  shape: 'triangular',
 },
 {
   priorityLevel: 'free',
   isFragile: true,
   weight: 12,
   to: 'Yor',
-  trackingNumber: 'suz2367'
+  trackingNumber: 'suz2367',
+  shape: 'round',
 }]
 
 function drawPackagesByType(type) {
@@ -69,6 +71,10 @@ function drawPackagesByType(type) {
   if (type == 'fragile') {
     const fragilePackages = packages.filter(p => p.isFragile == true)
     return drawPackages(fragilePackages)
+  }
+  if (type == 'round') {
+    const roundPackages = packages.filter(p => p.shape == 'round')
+    return drawPackages(roundPackages)
   }
   // filter: return a new array of the items that match
 }

@@ -1,0 +1,6 @@
+.hero-img {
+  background-image: url(./mail.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
